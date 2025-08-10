@@ -1,0 +1,35 @@
+<div class container>
+<div class="all">
+  @if (myFocus$ | async; as myFocus) {
+    <div class="card">
+      <img div class="giph" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxoMzIwZDBsanh5NTI5dWZ0ZmdlYmJmYW15MHJ2Y2p2MnYxNTdoeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xVxio2tNLAM5q/giphy.gif">
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ myFocus.id }}</mat-card-title>
+          <mat-card-subtitle>{{ myFocus.name }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <div class="source-image">
+          @for (hinh of myFocus.images; track hinh) {
+            <img class="hinh" mat-card-image [src]="hinh">
+          }
+        </div>
+
+        <mat-card-content>
+          <p>
+            <!-- Thêm nội dung chi tiết nhân vật ở đây -->
+          </p>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button class="nut" mat-button>LIKE</button>
+          <button class="nut" mat-button>DISLIKE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  } @else {
+    <p>Đang tải dữ liệu...</p>
+  }
+</div>
+</div>

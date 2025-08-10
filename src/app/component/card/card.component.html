@@ -1,0 +1,21 @@
+
+<div class="card">
+  <mat-card class="example-card" appearance="outlined" (click)="navigatetoDetail(product.id)">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{product.id}}</mat-card-title>
+      <mat-card-subtitle>{{product.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{product.imageUrl}}">
+    <mat-card-content>
+      <p>
+        {{product.price}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+
+      <button class="nut" mat-button (click)="$event.stopPropagation();addToCart(product.id)">ĂN</button>
+      <button class="nut" mat-button>BỎ</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

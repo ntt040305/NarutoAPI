@@ -1,0 +1,31 @@
+<div class="all">
+  @for(item of (myStorage$ | async) ?.characters ; track item.id){
+    <div class="card">
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.id}}</mat-card-title>
+          <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="source-image">
+          @for (hinh of item.images; track hinh){
+            <img class="hinh" mat-card-image [src]="hinh">
+          }
+        </div>
+
+        <mat-card-content>
+          <p>
+
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+
+          <button class="nut" mat-button>LIKE</button>
+          <button class="nut" mat-button>DISLIKE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  }
+</div>
+
