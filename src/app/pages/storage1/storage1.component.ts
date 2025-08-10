@@ -53,8 +53,11 @@ constructor(
     )
     // console.log(this.myData$);
   )
-}
 
+}
+  navigateToCharacterFocus(id: number) {
+    this.router.navigate([`/character-focus`, id]).then();
+  }
 ngOnInit(): void {
   // throw new Error('Method not implemented.');
 }

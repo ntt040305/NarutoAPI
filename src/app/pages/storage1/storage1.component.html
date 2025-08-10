@@ -1,7 +1,7 @@
 <div class="all">
   @for(item of (myStorage$ | async) ?.characters ; track item.id){
     <div class="card">
-      <mat-card class="example-card" appearance="outlined">
+      <mat-card class="example-card" appearance="outlined" (click)="navigateToCharacterFocus(item.id)">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>{{item.id}}</mat-card-title>
