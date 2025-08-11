@@ -19,6 +19,13 @@
   height: 150px;
   border-radius: 20px;
 }
+.jutsu{
+  width: 400px;
+  height: 300px;
+  overflow: hidden;      /* Ẩn phần vượt quá */
+  text-overflow: ellipsis; /* Thêm dấu ... */
+  border: transparent;
+}
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;

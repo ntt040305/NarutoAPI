@@ -3,7 +3,7 @@ export interface CharacterItemModel {
   name: string;
   images: [];
   debut: object;
-  family:object;
+  family:[];
   jutsu:[];
   natureType: [];
   personal:object;

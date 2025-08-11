@@ -2,7 +2,7 @@
 <div class="all">
   @if (myFocus$ | async; as myFocus) {
     <div class="card">
-      <img div class="giph" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxoMzIwZDBsanh5NTI5dWZ0ZmdlYmJmYW15MHJ2Y2p2MnYxNTdoeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xVxio2tNLAM5q/giphy.gif">
+<!--      <img div class="giph" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxoMzIwZDBsanh5NTI5dWZ0ZmdlYmJmYW15MHJ2Y2p2MnYxNTdoeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xVxio2tNLAM5q/giphy.gif">-->
       <mat-card class="example-card" appearance="outlined">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
@@ -17,9 +17,9 @@
         </div>
 
         <mat-card-content>
-          <p>
-            <!-- Thêm nội dung chi tiết nhân vật ở đây -->
-          </p>
+<!--          @for (hinh of myFocus.images; track hinh) {-->
+            <p class="jutsu">{{myFocus.jutsu}}</p>
+<!--          }-->
         </mat-card-content>
 
         <mat-card-actions>
